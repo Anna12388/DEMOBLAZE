@@ -24,8 +24,6 @@ public abstract class BaseTest {
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
-
-
     }
     @AfterMethod(alwaysRun = true)
     public void tearDown(){

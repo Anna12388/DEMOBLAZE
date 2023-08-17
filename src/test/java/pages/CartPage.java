@@ -5,15 +5,20 @@ import org.openqa.selenium.WebDriver;
 
 public class CartPage extends BasePage{
 
-    public static final By PLACE_ORDER_BUTTON = By.xpath("//
+    public static final By PLACE_ORDER_BUTTON = By.xpath("//button[contains(text(),'Place Order')]");
 
-    public CartPage open(){
-        driver.get(URL);
-        return this;
 
-    }
     public CartPage(WebDriver driver) {
+
         super(driver);
+    }
+    public CartPage open(){
+        driver.get(URL+"cart.html");
+        return this;
+    }
+    public CartPage clickPlaceOrderButton(){
+        driver.findElement(PLACE_ORDER_BUTTON).click();
+        return this;
     }
 
 
