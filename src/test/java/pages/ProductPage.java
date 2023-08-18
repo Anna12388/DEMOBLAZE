@@ -24,6 +24,7 @@ public class ProductPage extends BasePage{
         System.out.println("Текст алерта:"+ alertText);
         alert.accept();
     }
+
     @Override
     public boolean isPageOpen() {
         return isExist();
